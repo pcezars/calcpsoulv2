@@ -1,0 +1,79 @@
+<div class="container h-100">  
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-sm-5">
+            <div class="card bg-danger border-dark">
+                <div class="card-header">
+                    <img class="img-size2 mr-5" src="img/arcanine.png"><strong>Lista de pontos</strong>
+                </div>
+                <br>
+                <div class="alert alert-danger" role="alert">
+                    <h4 class="alert-heading">Atenção!</h4>
+                    <p>As brokes mostradas aqui são feitas por players, sempre confira a broke na nossa calculadora.</p>
+                    <p>Os pontos mostrados são o total, reduza os 10% e arredonde como preferir.</p>
+                    <hr>
+                    <p class="mb-0">Caso deseje adicionar uma broke a nossa lista, entre em contato in-game ou pelo email: broke@shbroke.com.br</p>
+                    </div>
+                <br>
+                <div class="form-group ml-4">
+                <form method="GET">
+                    <div class="form-group row ml-4">
+                    <label for="pokemon">Selecione um Pokémon</label>
+                    </div>
+                    <div class="col-sm-12">
+                    <select class="form-control" name="pokemon" id="pokemon">
+                        <option value="">-- Selecione --</option>
+                        
+                        <?php
+                            foreach ($lista as $lista) {        
+                        ?>
+                            <option value="<?php echo $lista["id"];?>"><?php echo $lista["id"].' - '.$lista["nome"];?></option>
+
+                            <?php
+                                };
+                            ?>
+                        
+                    </select> 
+                    </div><br>
+                    <div class="col-sm-12">
+                    <input class="btn btn-success" type="submit" value="Busca">
+                    </div>
+                </form>
+                </div>
+
+                <?php
+                if (isset($_GET['pokemon'])){
+
+                    if (count($poke) > 0){
+                        echo '<div class="table-responsive">
+                                    <table class="table table-sm">
+                                        <thead class="thead-secondary table-secondary">
+                                            <tr>
+                                                <th scole="col">#</th>
+                                                <th scope="col"></th>
+                                                <th scope="col">Num. Dex</th>
+                                                <th scope="col">Nome</th>
+                                                <th scope="col">Broke</th>
+                                                
+                                                </tr>
+                                        </thead>
+                                        <tbody class="table-striped">
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <td><img src="'.$poke[0]['imagem'].'"></td>
+                                                <td>' .$poke[0]['id']. '</td>
+                                                <td>' .$poke[0]['nome'] . '</td>
+                                                <td>' .$poke[0]['pontos'] . ' pontos</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>';
+                    }else {
+                        echo "<div>Pokémon não encontrado</div>";
+                    }
+                }
+                ?>
+
+                
+            </div>
+          </div>              
+        </div> 

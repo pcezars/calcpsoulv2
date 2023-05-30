@@ -8,10 +8,22 @@
 
         protected function initRoutes(){
 
-            $routes['home'] = array(
+            $routes['index'] = array(
                 'route' => '/',
                 'controller' => 'indexController',
                 'action' => 'index'
+            );
+
+            $routes['montar'] = array(
+                'route' => '/montar',
+                'controller' => 'indexController',
+                'action' => 'montar'
+            );
+
+            $routes['lista'] = array(
+                'route' => '/lista',
+                'controller' => 'indexController',
+                'action' => 'lista'
             );
 
             $this->setRoutes($routes);

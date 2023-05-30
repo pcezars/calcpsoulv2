@@ -1,0 +1,22 @@
+body,html{
+    height:100%;
+}
+
+body {
+    background: #1c1c1c;
+}
+
+.img-size {
+    height: 12%;
+    width: 12%;
+}
+
+.img-size2 {
+    height: 19%;
+    width: 19%;
+}
+
+.img-size3 {
+    height: 35%;
+    width: 35%;
+}

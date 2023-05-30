@@ -1,0 +1,35 @@
+<div class="container h-100">  
+        <div class="row h-100 justify-content-center align-items-center">
+          <div class="col-sm-3">
+            <div class="card bg-danger border-dark">
+                <div class="card-header">
+                    <img class="img-size mr-2" src="img/broke1.png"><strong>Monte a sua Broke</strong>
+                </div>
+                <div class="card-body bg-secondary text-white">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="pontos">Pontos a atingir?</label>
+                            <input class="form-control" type="number" name="pontos" id="pontos" aria-describedby="pontosHelp" placeholder="Ex: 750" min="0">
+                            <small id="pontosHelp" class="form-text">Adicione a quantidade de pontos necessários para a broke.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="pokeball"><img class="img-size" src="img/pokeball.png" alt="Quantidade de Pokeballs "></label>
+                            <input onkeyup="calcular()" class="form-control" type="number" name="pokeball" id="pokeball" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="greatball"><img class="img-size" src="img/greatball.png" alt="Quantidade de Greatballs "></label>
+                            <input onkeyup="calcular()" class="form-control" type="number" name="greatball" id="greatball" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="ultraball"><img class="img-size" src="img/ultraball.png" alt="Quantidade de Ultraballs "></label>
+                            <input onkeyup="calcular()" class="form-control" type="number" name="ultraball" id="ultraball" placeholder="0" min="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="totalPontos">Total de pontos</label>
+                            <input class="form-control" type="number" name="totalPontos" id="totalPontos" placeholder="0" readonly min="0">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>              
+</div>

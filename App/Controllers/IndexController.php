@@ -14,6 +14,16 @@ class IndexController extends Action {
 
         $this->render('index');
     }
+
+    public function montar(){
+
+        $this->render('montar');
+    }
+
+    public function lista(){
+
+        $this->render('lista');
+    }
     
 }
 
