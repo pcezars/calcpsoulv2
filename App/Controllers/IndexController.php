@@ -22,6 +22,10 @@ class IndexController extends Action {
 
     public function lista(){
 
+        $container = Container::getModel('Lista');
+        $this->lista = $container->load();
+        $this->poke = $container->recuperar();
+
         $this->render('lista');
     }
     

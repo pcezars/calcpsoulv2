@@ -24,7 +24,7 @@
                         <option value="">-- Selecione --</option>
                         
                         <?php
-                            foreach ($lista as $lista) {        
+                            foreach ($this->lista as $lista) {        
                         ?>
                             <option value="<?php echo $lista["id"];?>"><?php echo $lista["id"].' - '.$lista["nome"];?></option>
 
@@ -43,7 +43,7 @@
                 <?php
                 if (isset($_GET['pokemon'])){
 
-                    if (count($poke) > 0){
+                    if (count($this->poke) > 0){
                         echo '<div class="table-responsive">
                                     <table class="table table-sm">
                                         <thead class="thead-secondary table-secondary">
@@ -59,10 +59,10 @@
                                         <tbody class="table-striped">
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <td><img src="'.$poke[0]['imagem'].'"></td>
-                                                <td>' .$poke[0]['id']. '</td>
-                                                <td>' .$poke[0]['nome'] . '</td>
-                                                <td>' .$poke[0]['pontos'] . ' pontos</td>
+                                                <td><img src="'.$this->poke[0]['imagem'].'"></td>
+                                                <td>' .$this->poke[0]['id']. '</td>
+                                                <td>' .$this->poke[0]['nome'] . '</td>
+                                                <td>' .$this->poke[0]['pontos'] . ' pontos</td>
                                             </tr>
                                         </tbody>
                                     </table>
