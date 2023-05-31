@@ -36,6 +36,7 @@
                     </div><br>
                     <div class="col-sm-12">
                     <input class="btn btn-success" type="submit" value="Busca">
+                    
                     </div>
                 </form>
                 </div>
@@ -44,35 +45,54 @@
                 if (isset($_GET['pokemon'])){
 
                     if (count($this->poke) > 0){
-                        echo '<div class="table-responsive">
-                                    <table class="table table-sm">
-                                        <thead class="thead-secondary table-secondary">
-                                            <tr>
-                                                <th scole="col">#</th>
-                                                <th scope="col"></th>
-                                                <th scope="col">Num. Dex</th>
-                                                <th scope="col">Nome</th>
-                                                <th scope="col">Broke</th>
-                                                
-                                                </tr>
-                                        </thead>
-                                        <tbody class="table-striped">
-                                            <tr>
-                                                <th scope="col">#</th>
-                                                <td><img src="'.$this->poke[0]['imagem'].'"></td>
-                                                <td>' .$this->poke[0]['id']. '</td>
-                                                <td>' .$this->poke[0]['nome'] . '</td>
-                                                <td>' .$this->poke[0]['pontos'] . ' pontos</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>';
+                        echo '<button type="button" class="btn btn-success border-top rounded-0" data-toggle="modal" data-target="#modalDetails">'.$this->poke[0]['nome'] .'</button>';
                     }else {
-                        echo "<div>Pokémon não encontrado</div>";
+                        echo '<button type="button" class="btn btn-danger border-top rounded-0">Selecione um Pokémon da Lista.</button>';
                     }
                 }
                 ?>
-
+                
+                <!-- Modal -->
+                <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetailsLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalDetailsLabel">Detalhes do Pokémon</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <?php
+                            echo '<table class="table table-sm text-center">
+                            <thead class="thead-secondary table-secondary">
+                                <tr>
+                                    <th scole="col">#</th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Num. Dex</th>
+                                    <th scope="col">Nome</th>
+                                    <th scope="col">Broke</th>
+                                    
+                                    </tr>
+                            </thead>
+                            <tbody class="table-striped">
+                                <tr>
+                                    <th scope="col" class="pt-4">#</th>
+                                    <td><img src="'.$this->poke[0]['imagem'].'"></td>
+                                    <td class="pt-4">' .$this->poke[0]['id']. '</td>
+                                    <td class="pt-4">' .$this->poke[0]['nome'] . '</td>
+                                    <td class="pt-4">' .$this->poke[0]['pontos'] . ' pontos</td>
+                                </tr>
+                            </tbody>
+                        </table>'
+                        ?>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
                 
             </div>
           </div>              

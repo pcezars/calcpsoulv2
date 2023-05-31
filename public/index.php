@@ -1,7 +1,7 @@
 <?php 
 
 
-    require_once "../vendor/autoload.php";
+    require_once "../includes/vendor/autoload.php";
 
     $route = new \App\Route;
     

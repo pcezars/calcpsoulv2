@@ -56,4 +56,3 @@ function calcular (){
         removeClass.remove('bg-success', 'bg-danger')
     }
 }
-

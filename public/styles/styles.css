@@ -21,6 +21,11 @@ body {
     width: 35%;
 }
 
+nav a:hover{
+    transition: 0.5s all;
+    transform: scale(1.2);
+}
+
 footer a, footer i {
     transition: 0.5s all;
     padding-left: 5px;
