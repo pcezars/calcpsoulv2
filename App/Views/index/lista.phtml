@@ -45,7 +45,7 @@
                 if (isset($_GET['pokemon'])){
 
                     if (count($this->poke) > 0){
-                        echo '<button type="button" class="btn btn-success border-top rounded-0" data-toggle="modal" data-target="#modalDetails">'.$this->poke[0]['nome'] .'</button>';
+                        echo '<button type="button" class="btn btn-success border-top rounded-0" data-toggle="modal" data-target="#modalDetails">'.$this->poke[0]['nome'] .' - (Clique para abrir)</button>';
                     }else {
                         echo '<button type="button" class="btn btn-danger border-top rounded-0">Selecione um Pokémon da Lista.</button>';
                     }
